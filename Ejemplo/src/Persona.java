@@ -7,14 +7,13 @@ public abstract class Persona {
     private String apellido;
     private int edad;
     private int dni;
-    private String nacionalidad;
+
 
     public Persona(String nombre, String apellido, int edad, int dni, String nacionalidad) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
         this.dni = dni;
-        this.nacionalidad = nacionalidad;
     }
 
     public String getNombre() {
@@ -49,13 +48,7 @@ public abstract class Persona {
         this.dni = dni;
     }
 
-    public String getNacionalidad() {
-        return nacionalidad;
-    }
 
-    public void setNacionalidad(String nacionalidad) {
-        this.nacionalidad = nacionalidad;
-    }
 
     public String modificarEdad(int nuevaEdad)
     {
@@ -76,20 +69,9 @@ public abstract class Persona {
                 ", apellido='" + apellido + '\'' +
                 ", edad=" + edad +
                 ", dni=" + dni +
-                ", nacionalidad='" + nacionalidad + '\'' +
+                ", nacionalidad='" +  + '\'' +
                 '}';
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (o == null || getClass() != o.getClass()) return false;
-        Persona persona = (Persona) o;
-        return dni == persona.dni && Objects.equals(nacionalidad, persona.nacionalidad);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(dni, nacionalidad);
-    }
 
 }
