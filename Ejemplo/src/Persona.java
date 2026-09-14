@@ -1,6 +1,8 @@
 import java.util.Objects;
 
 public abstract class Persona {
+    //Esto es un cambio en la clase persona
+
     private String nombre;
     private String apellido;
     private int edad;
