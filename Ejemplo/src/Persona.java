@@ -60,7 +60,8 @@ public abstract class Persona {
     public String modificarEdad(int nuevaEdad)
     {
         String mensaje = "no fue posible cambair la edad";
-        if(nuevaEdad>0)// Nico no me importa tu cambio
+
+        if(nuevaEdad>0 && nuevaEdad>edad)
         {
             edad=nuevaEdad;
             mensaje="edad cambiada con exito";
